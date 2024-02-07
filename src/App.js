@@ -58,7 +58,7 @@ function App() {
   const isAdmin = user && user.is_admin;
   const isSupport = user && user.role === "support";
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  const stripePromise = loadStripe('pk_live_51Nl0ofCIGTiBaMcZvNip2A80U1pzhOBONNrsK0teNvqk43XmxTWigGecswrdrv5qpBhGWOILDRRcFa8nlO39hGJW00JU2qQQov');
+  const stripePromise = loadStripe(process.env.REACT_APP_PK_STRIPE);
   // const stripePromise = loadStripe('pk_test_51Nl0ofCIGTiBaMcZjk1vgad7YnFRUs84tNRqqpsHcyrL1rTVMwTs79Z2oi8PjMhzxEg97mO0JI89IHvB44uFNySd00qgVwvZyT');
 
   const homepageData = async () => {
